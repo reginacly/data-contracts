@@ -19,9 +19,8 @@ description:
 # OWNERSHIP
 # =========================
 team:
-  name : # The user's name.
-  description : # description about user
-  role : data owner #	The user's job role; Examples might be owner, data steward.
+  name : regina # The user's name.
+  role : data engineer intern #	The user's job role; Examples might be owner, data steward.
 
 # =========================
 # INFRASTRUCTURE
@@ -39,12 +38,6 @@ schema:
 - name : customer_cif # Name of the element.
   physicalType: table # The physical element data type in the data source. For objects: table, view, topic, file
   description: Master table for customer CIF # Description of the element.
-  relationships:
-  - type: foreignKey # The type of relationship
-    from:                     # Since customer_cif is defined as the master dataset in this example,
-    - <child_table.column>    # a concrete "from" (child) reference is not included here.
-    to:                       # Foreign key relationships should be declared in the corresponding
-    - <parent_table.column>   # child data contracts that reference customer_cif.cif_id.
 
   properties : 
   - name: cif_id # Name of the properties
