@@ -70,7 +70,7 @@ schema:
     criticalDataElement: true
     description: ID Type
     quality : 
-      - metric : valueNotInSet
+      - metric : valueInSet
         arguments :
           validValues : ['KTP','E-KTP','PASSPORT']
         dimension: correctness
@@ -220,7 +220,7 @@ schema:
     criticalDataElement: true
     description: Customer type
     quality : 
-      - metric : valueNotInSet
+      - metric : valueInSet
         arguments :
           validValues : ['INDIVUAL', 'INSTITUTION']
         dimension: correctness
@@ -278,7 +278,7 @@ schema:
     criticalDataElement: true
     description: Jenis Kelamin
     quality : 
-      - metric : valueNotInSet
+      - metric : valueInSet
         arguments :
           validValues : ['F','M']
         description: "All values must match one of the defined valid values."
@@ -336,7 +336,7 @@ schema:
     criticalDataElement: true
     description: Tipe npwp
     quality : 
-      - metric : valueNotInSet
+      - metric : valueInSet
         arguments :
           validValues : ['NPWP', 'NONPWP', 'SPNPWP']
         description: "All values must match one of the defined valid values."
@@ -407,7 +407,7 @@ schema:
     criticalDataElement: true
     description: home location
     quality : 
-      - metric : valueNotInSet
+      - metric : valueInSet
         arguments :
           validValues : ['N', 'K', 'S', 'M']
         description: "N : Menengah, K : Perkampungan, S : Sederhana, M : Perum Mewah"
@@ -437,7 +437,7 @@ schema:
     criticalDataElement: true
     description : nationality
     quality : 
-      - metric : valueNotInSet
+      - metric : valueInSet
         arguments :
           validValues : ['WNI', 'WNA']
         dimension: correctness
@@ -473,8 +473,7 @@ schema:
 # 4. DATA QUALITY CONTRACT
 # =========================
 dataQuality:
-  - type: library # Type of DQ rule. Valid values are library (default), text, sql, and custom.
-    metric : rowCountBetween
+  - metric : rowCountBetween
     description: "Row count must be between 1 and 1000"
     mustBeGreaterThan: 0
     mustBeLessThan: 1000
