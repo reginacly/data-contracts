@@ -60,7 +60,7 @@ schema:
     criticalDataElement: true
     description: business scale
     quality : 
-      - metric : valueNotInSet
+      - metric : valueInSet
         arguments :
           validValues : ['L', 'M', 'MI', 'O', 'S']
         dimension: correctness
