@@ -1,0 +1,96 @@
+# =========================
+# 1. FUNDAMENTALS
+# =========================
+apiVersion: v3.1.0  # Version of the standard used to build data contract. 
+kind: DataContract #The kind of file this is.
+
+id:  # A unique identifier used to reduce the risk of dataset name collisions.
+domain :  # Name of the logical data domain.
+version: 1.0.0 # Current version of the data contract.
+status:   #Current status of the data contract. Examples are "proposed", "draft", "active", "deprecated", "retired".
+
+description:
+  purpose:  # Intended purpose for the provided data.
+  usage:  # Recommended usage of the data.
+  limitations:  # Technical, compliance, and legal limitations for data use.
+
+# =========================
+# OWNERSHIP
+# =========================
+team:
+  name : # The user's name.
+  description : # description about user
+  role :  #	The user's job role; Examples might be owner, data steward.
+
+# =========================
+# INFRASTRUCTURE
+# =========================
+servers:
+  - server:  # Identifier of the server.
+    type:  # Type of the server. Can be one of: hive,  kafka, mysql, postgres, sqlserver, trino, etc.
+    database: # The name of the database.
+    schema: # Identify the schema in the data source in which your tables exist.
+
+# =========================
+# 3. SCHEMA CONTRACT
+# =========================
+schema:
+- name : # Name of the element.
+  physicalType: # The physical element data type in the data source. For objects: table, view, topic, file
+  description: # Description of the element.
+  relationships:
+  - type: foreignKey 
+    from:                     
+    -   
+    to:                       
+    -   
+
+  properties : 
+  - name:  # Name of the properties
+    logicalType: # The logical field datatype. One of string, date, timestamp, number, integer, etc.
+    physicalType : # The physical element data type in the data source. For example, VARCHAR(2), DOUBLE, INT.
+    primaryKey : # Boolean value specifying whether the field is primary or not. 
+    nullable: # Indicates if the element may contain Null values; possible values are true and false.
+    unique: # Indicates if the element contains unique values; possible values are true and false.
+    criticalDataElement: # If element is considered a critical data element (CDE) then true else false.
+    description: # Description of the properties
+  - name: 
+    logicalType: 
+    physicalType : 
+    nullable: 
+    criticalDataElement: 
+    description: 
+    quality : 
+      - metric : 
+        arguments :
+        dimension: 
+        severity: 
+
+# =========================
+# 4. DATA QUALITY CONTRACT
+# =========================
+dataQuality:
+  - type:  # Type of DQ rule. Valid values are library (default), text, sql, and custom.
+    metric : 
+    description: 
+# =========================
+# 5. FRESHNESS CONTRACT
+# =========================
+slaProperties:
+  - property: # A list of key/value pairs for SLA specific properties
+    value: # 	Agreement value.
+    unit: # d, day, days for days; y, yr, years for years, etc
+    element:
+    description: # Description of the SLA for humans
+
+# =========================
+# 6. CHANGE POLICY
+# =========================
+changePolicy:
+  breakingChange: 
+
+# =========================
+# 7. METADATA
+# =========================
+contractCreatedAt: 
+    
