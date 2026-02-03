@@ -91,9 +91,16 @@ This lifecycle supports:
 
 ```text
 data-contracts/
+├── examples/
+│   └── customer_cif_contract.yaml
+│   └── customer_cif_company_contract.yaml
+│   └── customer_cif_company_shareholder_contract.yaml
+│   └── customer_cif_other_bussiness_contract.yaml
+│   └── customer_cif_emergency_contract.yaml
+│   └── confins_stg_agreementasset_contract.yaml
 ├── templates/
-│   └── odcs-template.yaml
-|   └── odcs-example.yaml
+│   └── template.yaml
+|   └── metric_catalog.yaml
 ├── data-contracts/
 │   └── <database-name>/
 │       └── <table_name>.yaml
