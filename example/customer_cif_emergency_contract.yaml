@@ -60,7 +60,7 @@ schema:
     criticalDataElement: true
     description : relation type
     quality : 
-      - metric : valueNotInSet
+      - metric : valueInSet
         arguments :
           validValues : ['CH', 'FM', 'FR', 'PR', 'OT']
         dimension: correctness
