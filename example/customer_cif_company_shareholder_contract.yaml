@@ -109,7 +109,7 @@ schema:
     criticalDataElement: true
     description: ID Type
     quality : 
-      - metric : valueNotInSet
+      - metric : valueInSet
         arguments :
           validValues : ['KTP','E-KTP','PASSPORT']
         dimension: correctness
@@ -139,7 +139,7 @@ schema:
     criticalDataElement: true
     description: Jenis Kelamin
     quality : 
-      - metric : valueNotInSet
+      - metric : valueInSet
         arguments :
           validValues : ['F','M']
         description: "All values must match one of the defined valid values."
