@@ -1,0 +1,103 @@
+version: 1.0.0
+description: >
+  Metric catalog for data contracts.
+  Metrics are grouped by validation scope:
+  - column_metrics: applied at column/property level
+  - table_metrics: applied at table/dataset level
+
+column_metrics:
+
+    metric : valueInSet
+    description: "Nilai harus termasuk dalam daftar nilai yang diizinkan."
+    dimension: validity
+    severity: critical
+    arguments:
+      validValues: ["string"]
+    example:
+      validValues: ["A", "B", "C"]
+
+    metric : valueNotInSet
+    description: "Nilai tidak boleh termasuk dalam daftar nilai yang tidak diizinkan."
+    dimension: validity
+    severity: warning
+    arguments:
+      invalidValues: ["string"]
+    example:
+      invalidValues: ["X", "Y", "Z"]
+
+    metric : valuesNotContainDoubleSpaces
+    description: "Nilai tidak boleh mengandung spasi ganda."
+    dimension: correctness
+    severity: warning
+
+    metric : valueNotContainSpecialCharacter
+    description: "Nilai hanya boleh berisi huruf, angka, dan spasi."
+    dimension: validity
+    severity: warning
+
+    metric : valuePhoneNumberFormatValid
+    description: "Format nomor telepon harus valid."
+    dimension: validity
+    severity: critical
+
+    metric : valueEmailFormatValid
+    description: "Format email harus valid."
+    dimension: validity
+    severity: warning
+
+    metric : valueOutOfRange
+    description: "Nilai harus berada dalam rentang yang ditentukan."
+    dimension: correctness
+    severity: warning
+    arguments:
+      minValue: "number"
+      maxValue: "number"
+    example:
+      minValue: 0
+      maxValue: 100
+
+    metric : regexMatch
+    description: "Nilai harus sesuai dengan pola format tertentu."
+    dimension: validity
+    severity: critical
+    arguments:
+      pattern: "regex"
+    example:
+      pattern : '^[0-9]{16}$'
+
+    metric : regexMismatch
+    description: "Nilai tidak boleh sesuai dengan pola format tertentu."
+    dimension: validity
+    severity: critical
+    arguments:
+      pattern: "regex"
+    example:
+      pattern: "custom-regex"
+
+    metric : notEqualToField
+    description: "Nilai pada kolom ini tidak boleh sama dengan nilai pada kolom lain."
+    dimension: consistency
+    severity: critical
+    arguments:
+      compareToField: "column_name"
+    example:
+      compareToField: "customer_id"
+
+    metric : columnGreaterThan
+    description: "Nilai pada kolom ini harus lebih besar atau lebih baru dibanding kolom lain."
+    dimension: consistency
+    severity: critical
+    arguments:
+      compareColumn: "column_name"
+    example:
+      compareColumn: "created_at"
+
+table_metrics:
+
+    metric : rowCountBetween
+    description: "Nilai harus berada dalam rentang yang ditentukan."
+    mustBeGreaterThan: "number"
+    mustBeLessThan: "number"
+    example:
+      minValue: 0
+      maxValue: 1000
