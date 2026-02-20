@@ -18,8 +18,8 @@ description:
 # OWNERSHIP
 # =========================
 team:
-  name : regina # The user's name.
-  role : data engineer intern #	The user's job role; Examples might be owner, data steward.
+  name : # The user's name.
+  role : #	The user's job role; Examples might be owner, data steward.
 
 # =========================
 # INFRASTRUCTURE
@@ -160,7 +160,7 @@ dataQuality:
 # =========================
 slaProperties:
   - property: latency # A list of key/value pairs for SLA specific properties
-    value: 24 # 	Agreement value.
+    value: 12 # 	Agreement value.
     unit: h # d, day, days for days; y, yr, years for years, etc
     element: customer_cif_company_shareholder.updated_at
     description: Customer CIF company shareholder data latency must not exceed 24 hours # Description of the SLA for humans
