@@ -22,7 +22,7 @@ schema:
   relationships: []
   properties:
   - name: agrmnt_id
-    logicalType: ''
+    logicalType: integer
     physicalType: bigint
     nullable: false
     primaryKey: true
@@ -31,7 +31,7 @@ schema:
     description: ''
     quality: []
   - name: cwr_no
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(100)
     nullable: true
     primaryKey: false
@@ -40,7 +40,7 @@ schema:
     description: ''
     quality: []
   - name: curr_code
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -49,7 +49,7 @@ schema:
     description: ''
     quality: []
   - name: office_code
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -58,7 +58,7 @@ schema:
     description: ''
     quality: []
   - name: agrmnt_no
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(100)
     nullable: true
     primaryKey: false
@@ -67,7 +67,7 @@ schema:
     description: ''
     quality: []
   - name: cust_no
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(100)
     nullable: true
     primaryKey: false
@@ -76,7 +76,7 @@ schema:
     description: ''
     quality: []
   - name: spouse_no
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(100)
     nullable: true
     primaryKey: false
@@ -85,7 +85,7 @@ schema:
     description: ''
     quality: []
   - name: num_of_asset
-    logicalType: ''
+    logicalType: integer
     physicalType: integer
     nullable: true
     primaryKey: false
@@ -94,7 +94,7 @@ schema:
     description: ''
     quality: []
   - name: tenor
-    logicalType: ''
+    logicalType: integer
     physicalType: integer
     nullable: true
     primaryKey: false
@@ -103,7 +103,7 @@ schema:
     description: ''
     quality: []
   - name: pay_freq_code
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -112,7 +112,7 @@ schema:
     description: ''
     quality: []
   - name: num_of_inst
-    logicalType: ''
+    logicalType: integer
     physicalType: integer
     nullable: true
     primaryKey: false
@@ -121,7 +121,7 @@ schema:
     description: ''
     quality: []
   - name: cumulative_tenor
-    logicalType: ''
+    logicalType: integer
     physicalType: integer
     nullable: true
     primaryKey: false
@@ -130,7 +130,7 @@ schema:
     description: ''
     quality: []
   - name: interest_type
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -139,7 +139,7 @@ schema:
     description: ''
     quality: []
   - name: inst_scheme
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -148,7 +148,7 @@ schema:
     description: ''
     quality: []
   - name: step_up_down_type
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -157,7 +157,7 @@ schema:
     description: ''
     quality: []
   - name: grace_period_lc
-    logicalType: ''
+    logicalType: integer
     physicalType: integer
     nullable: true
     primaryKey: false
@@ -166,7 +166,7 @@ schema:
     description: ''
     quality: []
   - name: mr_lc_calc_method_code
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -175,7 +175,7 @@ schema:
     description: ''
     quality: []
   - name: total_asset_price
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -184,7 +184,7 @@ schema:
     description: ''
     quality: []
   - name: total_down_payment_gross_amt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -193,7 +193,7 @@ schema:
     description: ''
     quality: []
   - name: total_down_payment_nett_amt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -202,7 +202,7 @@ schema:
     description: ''
     quality: []
   - name: ntf_amt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -211,7 +211,7 @@ schema:
     description: ''
     quality: []
   - name: ins_capitalized_amt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -220,7 +220,7 @@ schema:
     description: ''
     quality: []
   - name: os_principal_undue_amt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -229,7 +229,7 @@ schema:
     description: ''
     quality: []
   - name: os_interest_undue_amt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -238,7 +238,7 @@ schema:
     description: ''
     quality: []
   - name: os_principal_amt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -247,7 +247,7 @@ schema:
     description: ''
     quality: []
   - name: os_interest_amt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -256,7 +256,7 @@ schema:
     description: ''
     quality: []
   - name: tdp_paid_coy_amt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -265,7 +265,7 @@ schema:
     description: ''
     quality: []
   - name: diff_rate_amt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -274,7 +274,7 @@ schema:
     description: ''
     quality: []
   - name: next_inst_due_num
-    logicalType: ''
+    logicalType: integer
     physicalType: integer
     nullable: true
     primaryKey: false
@@ -283,7 +283,7 @@ schema:
     description: ''
     quality: []
   - name: next_inst_num
-    logicalType: ''
+    logicalType: integer
     physicalType: integer
     nullable: true
     primaryKey: false
@@ -292,7 +292,7 @@ schema:
     description: ''
     quality: []
   - name: next_inst_due_dt
-    logicalType: ''
+    logicalType: date
     physicalType: date
     nullable: true
     primaryKey: false
@@ -301,7 +301,7 @@ schema:
     description: ''
     quality: []
   - name: next_inst_dt
-    logicalType: ''
+    logicalType: date
     physicalType: date
     nullable: true
     primaryKey: false
@@ -310,7 +310,7 @@ schema:
     description: ''
     quality: []
   - name: next_inst_amt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -319,7 +319,7 @@ schema:
     description: ''
     quality: []
   - name: contract_stat_code
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -328,7 +328,7 @@ schema:
     description: ''
     quality: []
   - name: default_stat_code
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -337,7 +337,7 @@ schema:
     description: ''
     quality: []
   - name: agrmnt_dt
-    logicalType: ''
+    logicalType: date
     physicalType: date
     nullable: true
     primaryKey: false
@@ -346,7 +346,7 @@ schema:
     description: ''
     quality: []
   - name: go_live_dt
-    logicalType: ''
+    logicalType: date
     physicalType: date
     nullable: true
     primaryKey: false
@@ -355,7 +355,7 @@ schema:
     description: ''
     quality: []
   - name: go_live_by
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -364,7 +364,7 @@ schema:
     description: ''
     quality: []
   - name: pre_go_live_dt
-    logicalType: ''
+    logicalType: date
     physicalType: date
     nullable: true
     primaryKey: false
@@ -373,7 +373,7 @@ schema:
     description: ''
     quality: []
   - name: effective_dt
-    logicalType: ''
+    logicalType: date
     physicalType: date
     nullable: true
     primaryKey: false
@@ -382,7 +382,7 @@ schema:
     description: ''
     quality: []
   - name: maturity_dt
-    logicalType: ''
+    logicalType: date
     physicalType: date
     nullable: true
     primaryKey: false
@@ -391,7 +391,7 @@ schema:
     description: ''
     quality: []
   - name: prepaid_hold_stat_code
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -400,7 +400,7 @@ schema:
     description: ''
     quality: []
   - name: lc_inst_rate_prml
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -409,7 +409,7 @@ schema:
     description: ''
     quality: []
   - name: lc_ins_rate_prml
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -418,7 +418,7 @@ schema:
     description: ''
     quality: []
   - name: effective_rate_prcnt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -427,7 +427,7 @@ schema:
     description: ''
     quality: []
   - name: flat_rate_prcnt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -436,7 +436,7 @@ schema:
     description: ''
     quality: []
   - name: grace_period
-    logicalType: ''
+    logicalType: integer
     physicalType: integer
     nullable: true
     primaryKey: false
@@ -445,7 +445,7 @@ schema:
     description: ''
     quality: []
   - name: grace_period_type
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -454,7 +454,7 @@ schema:
     description: ''
     quality: []
   - name: mr_first_inst_type_code
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -463,7 +463,7 @@ schema:
     description: ''
     quality: []
   - name: notes
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(4000)
     nullable: true
     primaryKey: false
@@ -472,7 +472,7 @@ schema:
     description: ''
     quality: []
   - name: lbppms_clctblty_code
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -481,7 +481,7 @@ schema:
     description: ''
     quality: []
   - name: app_no
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -490,7 +490,7 @@ schema:
     description: ''
     quality: []
   - name: prod_offering_code
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -499,7 +499,7 @@ schema:
     description: ''
     quality: []
   - name: prod_offering_version
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(20)
     nullable: true
     primaryKey: false
@@ -508,7 +508,7 @@ schema:
     description: ''
     quality: []
   - name: virtual_acc_no
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(100)
     nullable: true
     primaryKey: false
@@ -517,7 +517,7 @@ schema:
     description: ''
     quality: []
   - name: mr_wop_code
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -526,7 +526,7 @@ schema:
     description: ''
     quality: []
   - name: inst_amt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -535,7 +535,7 @@ schema:
     description: ''
     quality: []
   - name: floating_next_review_dt
-    logicalType: ''
+    logicalType: date
     physicalType: date
     nullable: true
     primaryKey: false
@@ -544,7 +544,7 @@ schema:
     description: ''
     quality: []
   - name: start_floating_inst
-    logicalType: ''
+    logicalType: integer
     physicalType: integer
     nullable: true
     primaryKey: false
@@ -553,7 +553,7 @@ schema:
     description: ''
     quality: []
   - name: ref_prod_type_code
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -562,7 +562,7 @@ schema:
     description: ''
     quality: []
   - name: lob_code
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -571,7 +571,7 @@ schema:
     description: ''
     quality: []
   - name: is_coll_block
-    logicalType: ''
+    logicalType: boolean
     physicalType: boolean
     nullable: true
     primaryKey: false
@@ -580,7 +580,7 @@ schema:
     description: ''
     quality: []
   - name: baloon_value_amt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -589,7 +589,7 @@ schema:
     description: ''
     quality: []
   - name: lc_inst_admin_fee_amt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -598,7 +598,7 @@ schema:
     description: ''
     quality: []
   - name: floating_period_code
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -607,7 +607,7 @@ schema:
     description: ''
     quality: []
   - name: journal_no
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(100)
     nullable: true
     primaryKey: false
@@ -616,7 +616,7 @@ schema:
     description: ''
     quality: []
   - name: biz_template_code
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -625,7 +625,7 @@ schema:
     description: ''
     quality: []
   - name: lms_schm_h_id
-    logicalType: ''
+    logicalType: integer
     physicalType: bigint
     nullable: true
     primaryKey: false
@@ -634,7 +634,7 @@ schema:
     description: ''
     quality: []
   - name: exp_dt
-    logicalType: ''
+    logicalType: date
     physicalType: date
     nullable: true
     primaryKey: false
@@ -643,7 +643,7 @@ schema:
     description: ''
     quality: []
   - name: inst_rounding
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -652,7 +652,7 @@ schema:
     description: ''
     quality: []
   - name: final_gross_yield_prcnt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -661,7 +661,7 @@ schema:
     description: ''
     quality: []
   - name: usr_crt
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -670,7 +670,7 @@ schema:
     description: ''
     quality: []
   - name: usr_upd
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -679,7 +679,7 @@ schema:
     description: ''
     quality: []
   - name: dtm_crt
-    logicalType: ''
+    logicalType: timestamp
     physicalType: timestamp without time zone
     nullable: true
     primaryKey: false
@@ -688,7 +688,7 @@ schema:
     description: ''
     quality: []
   - name: dtm_upd
-    logicalType: ''
+    logicalType: timestamp
     physicalType: timestamp without time zone
     nullable: true
     primaryKey: false
@@ -697,7 +697,7 @@ schema:
     description: ''
     quality: []
   - name: integrity_value
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(500)
     nullable: true
     primaryKey: false
@@ -706,7 +706,7 @@ schema:
     description: ''
     quality: []
   - name: gross_yield_prcnt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -715,7 +715,7 @@ schema:
     description: ''
     quality: []
   - name: cwr_version
-    logicalType: ''
+    logicalType: integer
     physicalType: bigint
     nullable: true
     primaryKey: false
@@ -724,7 +724,7 @@ schema:
     description: ''
     quality: []
   - name: total_income_amt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -733,7 +733,7 @@ schema:
     description: ''
     quality: []
   - name: total_recog_amt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -742,7 +742,7 @@ schema:
     description: ''
     quality: []
   - name: last_amendment_effective_dt
-    logicalType: ''
+    logicalType: date
     physicalType: date
     nullable: true
     primaryKey: false
@@ -751,7 +751,7 @@ schema:
     description: ''
     quality: []
   - name: interest_paid_amt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -760,7 +760,7 @@ schema:
     description: ''
     quality: []
   - name: principal_paid_amt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -769,7 +769,7 @@ schema:
     description: ''
     quality: []
   - name: floating_margin_rate_prcnt
-    logicalType: ''
+    logicalType: number
     physicalType: numeric
     nullable: true
     primaryKey: false
@@ -778,7 +778,7 @@ schema:
     description: ''
     quality: []
   - name: floating_ref_rate_code
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(50)
     nullable: true
     primaryKey: false
@@ -787,7 +787,7 @@ schema:
     description: ''
     quality: []
   - name: source_ts_ms
-    logicalType: ''
+    logicalType: timestamp
     physicalType: timestamp without time zone
     nullable: true
     primaryKey: false
@@ -796,7 +796,7 @@ schema:
     description: ''
     quality: []
   - name: operation_ts_ms
-    logicalType: ''
+    logicalType: timestamp
     physicalType: timestamp without time zone
     nullable: true
     primaryKey: false
@@ -805,7 +805,7 @@ schema:
     description: ''
     quality: []
   - name: is_deleted
-    logicalType: ''
+    logicalType: boolean
     physicalType: boolean
     nullable: true
     primaryKey: false
@@ -814,7 +814,7 @@ schema:
     description: ''
     quality: []
   - name: op
-    logicalType: ''
+    logicalType: string
     physicalType: character varying(5)
     nullable: true
     primaryKey: false
@@ -823,7 +823,7 @@ schema:
     description: ''
     quality: []
   - name: inserted_date
-    logicalType: ''
+    logicalType: timestamp
     physicalType: timestamp without time zone
     nullable: true
     primaryKey: false
