@@ -836,6 +836,10 @@ slaProperties: []
 changePolicy:
   breakingChange: requires new contract version
 metadata:
+<<<<<<< HEAD
   contractCreatedAt: '2026-02-26'
+=======
+  contractCreatedAt: '2026-02-24'
+>>>>>>> 4b646a0 (create holo)
   contractGeneratedBy: auto-holo-script
   notes: ''
