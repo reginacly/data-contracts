@@ -1,0 +1,391 @@
+apiVersion: v3.1.0
+kind: DataContract
+id: confins_r3.ar_agrmnt_acc_mnt
+version: 1.0.0
+status: DRAFT
+description:
+  purpose: ''
+  usage: ''
+  limitations: ''
+team:
+  name: ''
+  role: ''
+servers:
+- server: holo-bravo-prod
+  type: postgres
+  database: los
+  schema: confins_r3
+schema:
+- name: ar_agrmnt_acc_mnt
+  physicalType: table
+  description: ''
+  relationships: []
+  properties:
+  - name: agrmnt_acc_mnt_id
+    logicalType: ''
+    physicalType: bigint
+    nullable: false
+    primaryKey: true
+    unique: true
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: agrmnt_id
+    logicalType: ''
+    physicalType: bigint
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: inst_due_amt
+    logicalType: ''
+    physicalType: numeric
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: inst_due_paid_amt
+    logicalType: ''
+    physicalType: numeric
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: inst_due_waived_amt
+    logicalType: ''
+    physicalType: numeric
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: lc_inst_amt
+    logicalType: ''
+    physicalType: numeric
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: lc_inst_paid_amt
+    logicalType: ''
+    physicalType: numeric
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: lc_inst_waived_amt
+    logicalType: ''
+    physicalType: numeric
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: charge_rcv_amt
+    logicalType: ''
+    physicalType: numeric
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: charge_rcv_paid_amt
+    logicalType: ''
+    physicalType: numeric
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: charge_rcv_waived_amt
+    logicalType: ''
+    physicalType: numeric
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: prepaid_amt
+    logicalType: ''
+    physicalType: numeric
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: na_amt
+    logicalType: ''
+    physicalType: numeric
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: na_paid_amt
+    logicalType: ''
+    physicalType: numeric
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: na_waived_amt
+    logicalType: ''
+    physicalType: numeric
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: na_dt
+    logicalType: ''
+    physicalType: date
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: wo_amt
+    logicalType: ''
+    physicalType: numeric
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: wo_paid_amt
+    logicalType: ''
+    physicalType: numeric
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: wo_waived_amt
+    logicalType: ''
+    physicalType: numeric
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: wo_dt
+    logicalType: ''
+    physicalType: date
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: lc_inst_adm_fee_amt
+    logicalType: ''
+    physicalType: numeric
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: lc_inst_adm_fee_paid_amt
+    logicalType: ''
+    physicalType: numeric
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: lc_inst_adm_fee_waived
+    logicalType: ''
+    physicalType: numeric
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: rrd_dt
+    logicalType: ''
+    physicalType: date
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: is_ol_pay_generated
+    logicalType: ''
+    physicalType: boolean
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: usr_crt
+    logicalType: ''
+    physicalType: character varying(50)
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: usr_upd
+    logicalType: ''
+    physicalType: character varying(50)
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: dtm_crt
+    logicalType: ''
+    physicalType: timestamp without time zone
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: dtm_upd
+    logicalType: ''
+    physicalType: timestamp without time zone
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: integrity_value
+    logicalType: ''
+    physicalType: character varying(500)
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: deal_amt
+    logicalType: ''
+    physicalType: numeric
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: debt_frgv_no
+    logicalType: ''
+    physicalType: character varying(100)
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: na_no
+    logicalType: ''
+    physicalType: character varying(100)
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: rem_deal_amt_no
+    logicalType: ''
+    physicalType: character varying(100)
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: wo_no
+    logicalType: ''
+    physicalType: character varying(100)
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: source_ts_ms
+    logicalType: ''
+    physicalType: timestamp without time zone
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: operation_ts_ms
+    logicalType: ''
+    physicalType: timestamp without time zone
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: is_deleted
+    logicalType: ''
+    physicalType: boolean
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: op
+    logicalType: ''
+    physicalType: character varying(5)
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: inserted_date
+    logicalType: ''
+    physicalType: timestamp without time zone
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+dataQuality: []
+slaProperties: []
+changePolicy:
+  breakingChange: requires new contract version
+metadata:
+  contractCreatedAt: '2026-02-24'
+  contractGeneratedBy: auto-holo-script
+  notes: ''
