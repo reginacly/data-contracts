@@ -1,0 +1,157 @@
+apiVersion: v3.1.0
+kind: DataContract
+id: wsbfi_3_dev.agency_bfi_agency_api_leveling_agent_mst_hdr_odps
+version: 1.0.0
+status: DRAFT
+description:
+  purpose: ''
+  usage: ''
+  limitations: ''
+team:
+  name: ''
+  role: ''
+servers:
+- server: odps
+  type: odps
+  database: wsbfi_3_dev
+  schema: wsbfi_3_dev
+schema:
+- name: agency_bfi_agency_api_leveling_agent_mst_hdr_odps
+  physicalType: table
+  description: ''
+  relationships: []
+  properties:
+  - name: leveling_id
+    logicalType: string
+    physicalType: varchar(255)
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: leveling_name
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality: []
+  - name: type_id
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality: []
+  - name: start_active_date
+    logicalType: date
+    physicalType: date
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality: []
+  - name: end_active_date
+    logicalType: date
+    physicalType: date
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: created_date
+    logicalType: string
+    physicalType: datetime
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: created_by
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: updated_date
+    logicalType: string
+    physicalType: datetime
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: updated_by
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: source_ts_ms
+    logicalType: string
+    physicalType: datetime
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: operation_ts_ms
+    logicalType: string
+    physicalType: datetime
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: is_deleted
+    logicalType: boolean
+    physicalType: boolean
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: op
+    logicalType: string
+    physicalType: varchar(5)
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: inserted_date
+    logicalType: string
+    physicalType: datetime
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality: []
+dataQuality: []
+slaProperties: []
+changePolicy:
+  breakingChange: requires new contract version
+metadata:
+  contractCreatedAt: '2026-02-26'
+  contractGeneratedBy: auto-odps-script
+  notes: ''
