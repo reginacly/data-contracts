@@ -106,7 +106,7 @@ schema:
           pattern : '^62[1-9]\d{5,12}$'
         dimension: correctness
         severity: warning
-      - metric : valuesNotContainDoubleSpacesss
+      - metric : valuesNotContainDoubleSpace
         description : "Must not contain double spaces"
         dimension: correctness
         severity: critical
