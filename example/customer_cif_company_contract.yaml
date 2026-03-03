@@ -89,7 +89,7 @@ schema:
         pattern : '^[0-9]{14}$'
       dimension: correctness
       severity: critical
-    - metric : valuesNotContainDoubleSpaces
+    - metric : valuesNotContainDoubleSpace
       description : "Must not contain double spaces"
       dimension: correctness
       severity: critical
@@ -100,13 +100,13 @@ schema:
     criticalDataElement: true
     description: nomor hp
     quality :
-      - metric : regexMatch
+      - metric : valuePhoneNumberFormatValid
         description : "Phone number must follow a valid format"
         arguments :
           pattern : '^62[1-9]\d{5,12}$'
         dimension: correctness
         severity: warning
-      - metric : valuesNotContainDoubleSpaces
+      - metric : valuesNotContainDoubleSpace
         description : "Must not contain double spaces"
         dimension: correctness
         severity: critical
@@ -129,7 +129,7 @@ schema:
     criticalDataElement: true
     description: established city
     quality :
-      - metric : valuesNotContainDoubleSpaces
+      - metric : valuesNotContainDoubleSpace
         description : "Must not contain double spaces"
         dimension: correctness
         severity: critical
@@ -164,3 +164,4 @@ changePolicy:
 # =========================
 contractCreatedAt: 2026-01-21
     
+
