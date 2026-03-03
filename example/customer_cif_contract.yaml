@@ -179,12 +179,6 @@ schema:
         description : "Must not contain double spaces"
         dimension: correctness
         severity: critical
-      - metric: notEqualToField
-        description: "Spouse ID number must not be the same as customer ID number"
-        arguments:
-          compareToField: id_number
-        dimension: consistency
-        severity: critical
   - name: spouse_birth_date
     logicalType: date
     physicalType : date
