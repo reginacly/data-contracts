@@ -100,10 +100,8 @@ schema:
     criticalDataElement: true
     description: nomor hp
     quality :
-      - metric : regexMatch
+      - metric : valuePhoneNumberFormatValid
         description : "Phone number must follow a valid format"
-        arguments :
-          pattern : '^62[1-9]\d{5,12}$'
         dimension: correctness
         severity: warning
       - metric : valuesNotContainDoubleSpace
@@ -345,10 +343,8 @@ schema:
     criticalDataElement: true
     description: spouse mobile phone
     quality :
-      - metric : regexMatch
+      - metric : valuePhoneNumberFormatValid
         description : "Phone number must follow a valid format"
-        arguments :
-          pattern : '^62[1-9]\d{5,12}$'
         dimension: correctness
         severity: warning
       - metric : valuesNotContainDoubleSpace
