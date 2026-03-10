@@ -233,10 +233,6 @@ schema:
           maxValue : 99999999999999999
         dimension: correctness
         severity: warning
-      - metric : valuesNotContainDoubleSpace
-        description : "Must not contain double spaces"
-        dimension: correctness
-        severity: critical
   - name: num_dependent
     logicalType: number
     physicalType : integer
@@ -250,10 +246,6 @@ schema:
           minValue : 0
         dimension: correctness
         severity: warning
-      - metric : valuesNotContainDoubleSpace
-        description : "Must not contain double spaces"
-        dimension: correctness
-        severity: critical
   - name: npwp
     logicalType: string
     physicalType : varchar(20)
@@ -368,7 +360,7 @@ schema:
         severity: critical
   - name: employment_since_year
     logicalType: string
-    physicalType : text
+    physicalType : integer
     nullable: false
     criticalDataElement: true
     description: year of starting work
@@ -420,10 +412,6 @@ schema:
           minValue : 1
         dimension: correctness
         severity: warning
-      - metric : valuesNotContainDoubleSpace
-        description : "Must not contain double spaces"
-        dimension: correctness
-        severity: critical
   - name: nationality
     logicalType: string
     physicalType : text
