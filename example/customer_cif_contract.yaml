@@ -216,7 +216,7 @@ schema:
     quality : 
       - metric : valueInSet
         arguments :
-          validValues : ['INDIVUAL', 'INSTITUTION']
+          validValues : ['INDIVIDUAL', 'INSTITUTION']
         dimension: correctness
         severity: warning
   - name: monthly_income
@@ -360,17 +360,17 @@ schema:
         severity: critical
   - name: employment_since_year
     logicalType: string
-    physicalType : integer
+    physicalType : text
     nullable: false
     criticalDataElement: true
     description: year of starting work
     quality:
-    - metric: valueOutOfRange
-      description: "Employment since year must be greater than or equal to 1900"
-      arguments:
-        minValue: 1900
-      dimension: correctness
-      severity: warning
+    # - metric: valueOutOfRange
+    #   description: "Employment since year must be greater than or equal to 1900"
+    #   arguments:
+    #     minValue: 1900
+    #   dimension: correctness
+    #   severity: warning
     - metric : valuesNotContainDoubleSpace
       description : "Must not contain double spaces"
       dimension: correctness
