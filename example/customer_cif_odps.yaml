@@ -1,0 +1,996 @@
+apiVersion: v3.1.0
+kind: DataContract
+id: wsbfi_3_dev.customer_cif_odps
+version: 1.0.0
+status: DRAFT
+description:
+  purpose: ''
+  usage: ''
+  limitations: ''
+team:
+  name: ''
+  role: ''
+servers:
+- server: odps
+  type: odps
+  database: wsbfi_3_dev
+  schema: wsbfi_3_dev
+schema:
+- name: customer_cif_odps
+  physicalType: table
+  description: ''
+  relationships: []
+  properties:
+  - name: cif_id
+    logicalType: string
+    physicalType: varchar(100)
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: name
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: id_type
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: id_number
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: mobile_phone
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: email
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: birth_date
+    logicalType: date
+    physicalType: date
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+    - metric: valueOutOfRange
+      description: ''
+      dimension: validity
+      arguments:
+        min_value: '1900-01-01'
+      severity: warning
+  - name: birth_place
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: mother_name
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: occupation
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: occupation_id
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: spouse_name
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: spouse_id_number
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: spouse_birth_date
+    logicalType: date
+    physicalType: date
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+    - metric: valueOutOfRange
+      description: ''
+      dimension: validity
+      arguments:
+        min_value: '1900-01-01'
+      severity: warning
+  - name: spouse_birth_place
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: spouse_occupation
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: spouse_occupation_id
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: customer_group_id
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: customer_type
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: monthly_income
+    logicalType: number
+    physicalType: double
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valueOutOfRange
+      description: ''
+      arguments:
+        minValue: 0
+      dimension: correctness
+      severity: critical
+  - name: num_dependent
+    logicalType: integer
+    physicalType: int
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valueOutOfRange
+      description: ''
+      arguments:
+        minValue: 0
+      dimension: correctness
+      severity: critical
+  - name: emergency_relation
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: emergency_name
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: emergency_number
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: created_at
+    logicalType: string
+    physicalType: datetime
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+    - metric: valueOutOfRange
+      description: ''
+      dimension: validity
+      arguments:
+        min_value: '1900-01-01'
+      severity: warning
+  - name: updated_at
+    logicalType: string
+    physicalType: datetime
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+    - metric: valueOutOfRange
+      description: ''
+      dimension: validity
+      arguments:
+        min_value: '1900-01-01'
+      severity: warning
+  - name: updated_by
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: deleted_at
+    logicalType: string
+    physicalType: datetime
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+    - metric: valueOutOfRange
+      description: ''
+      dimension: validity
+      arguments:
+        min_value: '1900-01-01'
+      severity: warning
+  - name: npwp
+    logicalType: string
+    physicalType: varchar(20)
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: gender
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: confins_customer_id
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: profession_id
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: profession_mapping_id
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: personal_customer_type
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: education_id
+    logicalType: integer
+    physicalType: bigint
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valueOutOfRange
+      description: ''
+      arguments:
+        minValue: 0
+      dimension: correctness
+      severity: critical
+  - name: industry_type_id
+    logicalType: integer
+    physicalType: bigint
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valueOutOfRange
+      description: ''
+      arguments:
+        minValue: 0
+      dimension: correctness
+      severity: critical
+  - name: home_status_id
+    logicalType: integer
+    physicalType: bigint
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valueOutOfRange
+      description: ''
+      arguments:
+        minValue: 0
+      dimension: correctness
+      severity: critical
+  - name: religion_id
+    logicalType: integer
+    physicalType: bigint
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valueOutOfRange
+      description: ''
+      arguments:
+        minValue: 0
+      dimension: correctness
+      severity: critical
+  - name: marital_status_id
+    logicalType: integer
+    physicalType: bigint
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valueOutOfRange
+      description: ''
+      arguments:
+        minValue: 0
+      dimension: correctness
+      severity: critical
+  - name: company_name
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: legal_name
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: spouse_legal_name
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: deleted
+    logicalType: boolean
+    physicalType: boolean
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: source_ts_ms
+    logicalType: string
+    physicalType: datetime
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+    - metric: valueOutOfRange
+      description: ''
+      dimension: validity
+      arguments:
+        min_value: '1900-01-01'
+      severity: warning
+  - name: operation_ts_ms
+    logicalType: string
+    physicalType: datetime
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+    - metric: valueOutOfRange
+      description: ''
+      dimension: validity
+      arguments:
+        min_value: '1900-01-01'
+      severity: warning
+  - name: is_deleted
+    logicalType: boolean
+    physicalType: boolean
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: op
+    logicalType: string
+    physicalType: varchar(5)
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: inserted_date
+    logicalType: string
+    physicalType: datetime
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+    - metric: valueOutOfRange
+      description: ''
+      dimension: validity
+      arguments:
+        min_value: '1900-01-01'
+      severity: warning
+  - name: npwp_type
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: spouse_mobile_phone
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: home_owner_name
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: old_npwp
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: employment_since_year
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: other_income
+    logicalType: number
+    physicalType: double
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valueOutOfRange
+      description: ''
+      arguments:
+        minValue: 0
+      dimension: correctness
+      severity: critical
+  - name: turnover
+    logicalType: number
+    physicalType: double
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valueOutOfRange
+      description: ''
+      arguments:
+        minValue: 0
+      dimension: correctness
+      severity: critical
+  - name: stay_since_year
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: home_location
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: home_price
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: spouse_income
+    logicalType: number
+    physicalType: double
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valueOutOfRange
+      description: ''
+      arguments:
+        minValue: 0
+      dimension: correctness
+      severity: critical
+  - name: number_of_employees
+    logicalType: number
+    physicalType: double
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valueOutOfRange
+      description: ''
+      arguments:
+        minValue: 0
+      dimension: correctness
+      severity: critical
+  - name: monthly_variable_income
+    logicalType: number
+    physicalType: double
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valueOutOfRange
+      description: ''
+      arguments:
+        minValue: 0
+      dimension: correctness
+      severity: critical
+  - name: nationality
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: id_number_expiration_date
+    logicalType: date
+    physicalType: date
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+    - metric: valueOutOfRange
+      description: ''
+      dimension: validity
+      arguments:
+        min_value: '1900-01-01'
+      severity: warning
+  - name: spouse_occupation_status
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: sources_of_income
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: is_guarantor
+    logicalType: boolean
+    physicalType: boolean
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+  - name: occupation_status
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+  - name: spouse_id_number_expiration_date
+    logicalType: date
+    physicalType: date
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+    - metric: valueOutOfRange
+      description: ''
+      dimension: validity
+      arguments:
+        min_value: '1900-01-01'
+      severity: warning
+  - name: is_split_treasure
+    logicalType: boolean
+    physicalType: boolean
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality: []
+dataQuality: []
+slaProperties: []
+changePolicy:
+  breakingChange: requires new contract version
+metadata:
+  contractCreatedAt: '2026-03-17'
+  contractGeneratedBy: auto-odps-script
+  notes: ''
