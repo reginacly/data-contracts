@@ -116,7 +116,7 @@ schema:
       description: ''
       dimension: validity
       arguments:
-        min_value: '1900-01-01'
+        minValue: '1900-01-01'
       severity: warning
   - name: birth_place
     logicalType: string
@@ -213,7 +213,7 @@ schema:
       description: ''
       dimension: validity
       arguments:
-        min_value: '1900-01-01'
+        minValue: '1900-01-01'
       severity: warning
   - name: spouse_birth_place
     logicalType: string
@@ -366,7 +366,7 @@ schema:
       description: ''
       dimension: validity
       arguments:
-        min_value: '1900-01-01'
+        minValue: '1900-01-01'
       severity: warning
   - name: updated_at
     logicalType: string
@@ -385,7 +385,7 @@ schema:
       description: ''
       dimension: validity
       arguments:
-        min_value: '1900-01-01'
+        minValue: '1900-01-01'
       severity: warning
   - name: updated_by
     logicalType: string
@@ -417,7 +417,7 @@ schema:
       description: ''
       dimension: validity
       arguments:
-        min_value: '1900-01-01'
+        minValue: '1900-01-01'
       severity: warning
   - name: npwp
     logicalType: string
@@ -637,7 +637,7 @@ schema:
       description: ''
       dimension: validity
       arguments:
-        min_value: '1900-01-01'
+        minValue: '1900-01-01'
       severity: warning
   - name: operation_ts_ms
     logicalType: string
@@ -656,7 +656,7 @@ schema:
       description: ''
       dimension: validity
       arguments:
-        min_value: '1900-01-01'
+        minValue: '1900-01-01'
       severity: warning
   - name: is_deleted
     logicalType: boolean
@@ -697,7 +697,7 @@ schema:
       description: ''
       dimension: validity
       arguments:
-        min_value: '1900-01-01'
+        minValue: '1900-01-01'
       severity: warning
   - name: npwp_type
     logicalType: string
@@ -908,7 +908,7 @@ schema:
       description: ''
       dimension: validity
       arguments:
-        min_value: '1900-01-01'
+        minValue: '1900-01-01'
       severity: warning
   - name: spouse_occupation_status
     logicalType: string
@@ -975,7 +975,7 @@ schema:
       description: ''
       dimension: validity
       arguments:
-        min_value: '1900-01-01'
+        minValue: '1900-01-01'
       severity: warning
   - name: is_split_treasure
     logicalType: boolean
