@@ -1,0 +1,1509 @@
+apiVersion: v3.1.0
+kind: DataContract
+id: bravo_dev.dbo_collection__agreement_juris_masking
+version: 1.0.0
+status: DRAFT
+description:
+  purpose: ''
+  usage: ''
+  limitations: ''
+team:
+  name: ''
+  role: ''
+servers:
+- server: odps
+  type: odps
+  database: bravo_dev
+  schema: bravo_dev
+schema:
+- name: dbo_collection__agreement_juris_masking
+  physicalType: table
+  description: ''
+  relationships: []
+  properties:
+  - name: branchid
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: branchfullname
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: applicationid
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: agreementno
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: name
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: gender
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: maritalstatus
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: spousename
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: birthplace
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: birthdate
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: surgatemothername
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: profession
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: companyname
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: assetdescription
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: licenseplate
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: color
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: manufacturingyear
+    logicalType: integer
+    physicalType: bigint
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valueOutOfRange
+      description: ''
+      arguments:
+        minValue: 0
+      dimension: correctness
+      severity: warning
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: nextinstallmentnumber
+    logicalType: integer
+    physicalType: bigint
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valueOutOfRange
+      description: ''
+      arguments:
+        minValue: 0
+      dimension: correctness
+      severity: warning
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: agreementdate
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: effectivedate
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: maturitydate
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: duedate
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: tenor
+    logicalType: integer
+    physicalType: bigint
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valueOutOfRange
+      description: ''
+      arguments:
+        minValue: 0
+      dimension: correctness
+      severity: warning
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: productoffering
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: firstinstallment
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: graceperiodlatecharges
+    logicalType: integer
+    physicalType: bigint
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valueOutOfRange
+      description: ''
+      arguments:
+        minValue: 0
+      dimension: correctness
+      severity: warning
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: paymenthierarchy
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: installmentreminder
+    logicalType: integer
+    physicalType: bigint
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valueOutOfRange
+      description: ''
+      arguments:
+        minValue: 0
+      dimension: correctness
+      severity: warning
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: remindertype
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: surveyorid1
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: assetdocstatus
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: doclocation
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: branchlocation
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: customerid
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: residenceaddress
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: installmentamount
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: contractprepaidamount
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: osinstallmentdue
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: oslcinstallment
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: osinsurance
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: oslcinsurance
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: arother
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: fundingamount
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: outstandingprincipal
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: legalareaphone1
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: legalphone1
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: companyareaphone1
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: companyphone1
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: residenceareaphone1
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: residencephone1
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: mobilephone
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: companyareafax
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: companyfax
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: legalareafax
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: legalfax
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: residenceareafax
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: residencefax
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: taskdate
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: pastduedays
+    logicalType: integer
+    physicalType: bigint
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valueOutOfRange
+      description: ''
+      arguments:
+        minValue: 0
+      dimension: correctness
+      severity: warning
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: producttype
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: emergencyareaphone1
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: emergencyphone1
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: emergencyareaphone2
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: emergencyphone2
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: emergencycontactname
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: residenceareaphone2
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: residencephone2
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: legalareaphone2
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: legalphone2
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: areaid
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: installmentstepdown
+    logicalType: integer
+    physicalType: bigint
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valueOutOfRange
+      description: ''
+      arguments:
+        minValue: 0
+      dimension: correctness
+      severity: warning
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: realtenor
+    logicalType: integer
+    physicalType: bigint
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valueOutOfRange
+      description: ''
+      arguments:
+        minValue: 0
+      dimension: correctness
+      severity: warning
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: lastpaiddate
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: lastduedate
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: paymenttypedesc
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: bankaccountname
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: spousemobilephone
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: companyareaphone2
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: companyphone2
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: email
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: assetcategory
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: grading
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: rating
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: collectortype
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: true
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: pdcduedate
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+  - name: pt
+    logicalType: string
+    physicalType: string
+    nullable: true
+    primaryKey: false
+    unique: false
+    criticalDataElement: false
+    description: ''
+    quality:
+    - metric: valuesNotContainDoubleSpace
+      description: ''
+      dimension: correctness
+      severity: critical
+    - metric: valuesNotNull
+      description: ''
+      dimension: completeness
+      severity: critical
+dataQuality: []
+slaProperties: []
+changePolicy:
+  breakingChange: requires new contract version
+metadata:
+  contractCreatedAt: '2026-03-18'
+  contractGeneratedBy: auto-odps-script
+  notes: ''
