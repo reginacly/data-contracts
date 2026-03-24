@@ -136,6 +136,8 @@ schema:
         validValues:
         - F
         - M
+        - Female
+        - Male
       description: All values must match one of the defined valid values.
       dimension: correctness
       severity: warning
@@ -315,6 +317,13 @@ schema:
       description: ''
       dimension: completeness
       severity: critical
+    - metric: regexMatch
+      description: License plate must follow Indonesian TNKB format (e.g., B 1234
+        XYZ)
+      arguments:
+        pattern: ^[A-Z]{1,2}\s?[0-9]{1,4}\s?[A-Z]{0,3}$
+      dimension: correctness
+      severity: critical
   - name: color
     logicalType: string
     physicalType: string
@@ -350,6 +359,12 @@ schema:
     - metric: valuesNotNull
       description: ''
       dimension: completeness
+      severity: critical
+    - metric: valueOutOfRange
+      description: Manufacturing year must be  after 1900
+      arguments:
+        minValue: '1901'
+      dimension: correctness
       severity: critical
   - name: nextinstallmentnumber
     logicalType: integer
@@ -491,6 +506,16 @@ schema:
       description: ''
       dimension: completeness
       severity: critical
+    - metric: valueInSet
+      arguments:
+        validValues:
+        - AR
+        - AD
+        - ARREAR
+        - ADVANCE
+      description: All values must match one of the defined valid values.
+      dimension: correctness
+      severity: warning
   - name: graceperiodlatecharges
     logicalType: integer
     physicalType: bigint
@@ -949,6 +974,10 @@ schema:
       description: ''
       dimension: completeness
       severity: critical
+    - metric: valuePhoneNumberFormatValid
+      description: Phone number must follow a valid format
+      dimension: correctness
+      severity: warning
   - name: companyareafax
     logicalType: string
     physicalType: string
@@ -1156,6 +1185,10 @@ schema:
       description: ''
       dimension: completeness
       severity: critical
+    - metric: valuePhoneNumberFormatValid
+      description: Phone number must follow a valid format
+      dimension: correctness
+      severity: warning
   - name: emergencyareaphone2
     logicalType: string
     physicalType: string
