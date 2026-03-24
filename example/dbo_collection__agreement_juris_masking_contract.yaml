@@ -55,6 +55,10 @@ schema:
       description: ''
       dimension: completeness
       severity: critical
+    - metric: valueNotContainSpecialCharacter
+      description: name must not contain special character
+      dimension: correctness
+      severity: critical
   - name: applicationid
     logicalType: string
     physicalType: string
@@ -106,6 +110,10 @@ schema:
       description: ''
       dimension: completeness
       severity: critical
+    - metric: valueNotContainSpecialCharacter
+      description: name must not contain special character
+      dimension: correctness
+      severity: critical
   - name: gender
     logicalType: string
     physicalType: string
@@ -123,13 +131,21 @@ schema:
       description: ''
       dimension: completeness
       severity: critical
+    - metric: valueInSet
+      arguments:
+        validValues:
+        - F
+        - M
+      description: All values must match one of the defined valid values.
+      dimension: correctness
+      severity: warning
   - name: maritalstatus
     logicalType: string
     physicalType: string
     nullable: true
     primaryKey: false
     unique: false
-    criticalDataElement: false
+    criticalDataElement: true
     description: ''
     quality:
     - metric: valuesNotContainDoubleSpace
@@ -140,6 +156,17 @@ schema:
       description: ''
       dimension: completeness
       severity: critical
+    - metric: valueInSet
+      arguments:
+        validValues:
+        - Single
+        - Maried
+        - Widdow
+        - Widdower
+        - Divorce
+      description: All values must match one of the defined valid values.
+      dimension: correctness
+      severity: warning
   - name: spousename
     logicalType: string
     physicalType: string
@@ -156,6 +183,10 @@ schema:
     - metric: valuesNotNull
       description: ''
       dimension: completeness
+      severity: critical
+    - metric: valueNotContainSpecialCharacter
+      description: name must not contain special character
+      dimension: correctness
       severity: critical
   - name: birthplace
     logicalType: string
@@ -208,13 +239,17 @@ schema:
       description: ''
       dimension: completeness
       severity: critical
+    - metric: valueNotContainSpecialCharacter
+      description: name must not contain special character
+      dimension: correctness
+      severity: critical
   - name: profession
     logicalType: string
     physicalType: string
     nullable: true
     primaryKey: false
     unique: false
-    criticalDataElement: false
+    criticalDataElement: true
     description: ''
     quality:
     - metric: valuesNotContainDoubleSpace
@@ -241,6 +276,10 @@ schema:
     - metric: valuesNotNull
       description: ''
       dimension: completeness
+      severity: critical
+    - metric: valueNotContainSpecialCharacter
+      description: name must not contain special character
+      dimension: correctness
       severity: critical
   - name: assetdescription
     logicalType: string
@@ -282,7 +321,7 @@ schema:
     nullable: true
     primaryKey: false
     unique: false
-    criticalDataElement: false
+    criticalDataElement: true
     description: ''
     quality:
     - metric: valuesNotContainDoubleSpace
@@ -405,7 +444,7 @@ schema:
     nullable: true
     primaryKey: false
     unique: false
-    criticalDataElement: false
+    criticalDataElement: true
     description: ''
     quality:
     - metric: valueOutOfRange
@@ -441,7 +480,7 @@ schema:
     nullable: true
     primaryKey: false
     unique: false
-    criticalDataElement: false
+    criticalDataElement: true
     description: ''
     quality:
     - metric: valuesNotContainDoubleSpace
@@ -802,7 +841,7 @@ schema:
     nullable: true
     primaryKey: false
     unique: false
-    criticalDataElement: false
+    criticalDataElement: true
     description: ''
     quality:
     - metric: valuesNotContainDoubleSpace
@@ -813,6 +852,10 @@ schema:
       description: ''
       dimension: completeness
       severity: critical
+    - metric: valuePhoneNumberFormatValid
+      description: Phone number must follow a valid format
+      dimension: correctness
+      severity: warning
   - name: companyareaphone1
     logicalType: string
     physicalType: string
@@ -836,7 +879,7 @@ schema:
     nullable: true
     primaryKey: false
     unique: false
-    criticalDataElement: false
+    criticalDataElement: true
     description: ''
     quality:
     - metric: valuesNotContainDoubleSpace
@@ -847,6 +890,10 @@ schema:
       description: ''
       dimension: completeness
       severity: critical
+    - metric: valuePhoneNumberFormatValid
+      description: Phone number must follow a valid format
+      dimension: correctness
+      severity: warning
   - name: residenceareaphone1
     logicalType: string
     physicalType: string
@@ -870,7 +917,7 @@ schema:
     nullable: true
     primaryKey: false
     unique: false
-    criticalDataElement: false
+    criticalDataElement: true
     description: ''
     quality:
     - metric: valuesNotContainDoubleSpace
@@ -881,13 +928,17 @@ schema:
       description: ''
       dimension: completeness
       severity: critical
+    - metric: valuePhoneNumberFormatValid
+      description: Phone number must follow a valid format
+      dimension: correctness
+      severity: warning
   - name: mobilephone
     logicalType: string
     physicalType: string
     nullable: true
     primaryKey: false
     unique: false
-    criticalDataElement: false
+    criticalDataElement: true
     description: ''
     quality:
     - metric: valuesNotContainDoubleSpace
@@ -921,7 +972,7 @@ schema:
     nullable: true
     primaryKey: false
     unique: false
-    criticalDataElement: false
+    criticalDataElement: true
     description: ''
     quality:
     - metric: valuesNotContainDoubleSpace
@@ -931,6 +982,12 @@ schema:
     - metric: valuesNotNull
       description: ''
       dimension: completeness
+      severity: critical
+    - metric: regexMatch
+      description: company fax must be 14-digit numeric
+      arguments:
+        pattern: ^[0-9]{14}$
+      dimension: correctness
       severity: critical
   - name: legalareafax
     logicalType: string
@@ -955,7 +1012,7 @@ schema:
     nullable: true
     primaryKey: false
     unique: false
-    criticalDataElement: false
+    criticalDataElement: true
     description: ''
     quality:
     - metric: valuesNotContainDoubleSpace
@@ -965,6 +1022,12 @@ schema:
     - metric: valuesNotNull
       description: ''
       dimension: completeness
+      severity: critical
+    - metric: regexMatch
+      description: company fax must be 14-digit numeric
+      arguments:
+        pattern: ^[0-9]{14}$
+      dimension: correctness
       severity: critical
   - name: residenceareafax
     logicalType: string
@@ -989,7 +1052,7 @@ schema:
     nullable: true
     primaryKey: false
     unique: false
-    criticalDataElement: false
+    criticalDataElement: true
     description: ''
     quality:
     - metric: valuesNotContainDoubleSpace
@@ -999,6 +1062,12 @@ schema:
     - metric: valuesNotNull
       description: ''
       dimension: completeness
+      severity: critical
+    - metric: regexMatch
+      description: company fax must be 14-digit numeric
+      arguments:
+        pattern: ^[0-9]{14}$
+      dimension: correctness
       severity: critical
   - name: taskdate
     logicalType: string
@@ -1076,7 +1145,7 @@ schema:
     nullable: true
     primaryKey: false
     unique: false
-    criticalDataElement: false
+    criticalDataElement: true
     description: ''
     quality:
     - metric: valuesNotContainDoubleSpace
@@ -1110,7 +1179,7 @@ schema:
     nullable: true
     primaryKey: false
     unique: false
-    criticalDataElement: false
+    criticalDataElement: true
     description: ''
     quality:
     - metric: valuesNotContainDoubleSpace
@@ -1121,6 +1190,10 @@ schema:
       description: ''
       dimension: completeness
       severity: critical
+    - metric: valuePhoneNumberFormatValid
+      description: Phone number must follow a valid format
+      dimension: correctness
+      severity: warning
   - name: emergencycontactname
     logicalType: string
     physicalType: string
@@ -1137,6 +1210,10 @@ schema:
     - metric: valuesNotNull
       description: ''
       dimension: completeness
+      severity: critical
+    - metric: valueNotContainSpecialCharacter
+      description: name must not contain special character
+      dimension: correctness
       severity: critical
   - name: residenceareaphone2
     logicalType: string
@@ -1161,7 +1238,7 @@ schema:
     nullable: true
     primaryKey: false
     unique: false
-    criticalDataElement: false
+    criticalDataElement: true
     description: ''
     quality:
     - metric: valuesNotContainDoubleSpace
@@ -1172,6 +1249,10 @@ schema:
       description: ''
       dimension: completeness
       severity: critical
+    - metric: valuePhoneNumberFormatValid
+      description: Phone number must follow a valid format
+      dimension: correctness
+      severity: warning
   - name: legalareaphone2
     logicalType: string
     physicalType: string
@@ -1195,7 +1276,7 @@ schema:
     nullable: true
     primaryKey: false
     unique: false
-    criticalDataElement: false
+    criticalDataElement: true
     description: ''
     quality:
     - metric: valuesNotContainDoubleSpace
@@ -1206,6 +1287,10 @@ schema:
       description: ''
       dimension: completeness
       severity: critical
+    - metric: valuePhoneNumberFormatValid
+      description: Phone number must follow a valid format
+      dimension: correctness
+      severity: warning
   - name: areaid
     logicalType: string
     physicalType: string
@@ -1248,7 +1333,7 @@ schema:
     nullable: true
     primaryKey: false
     unique: false
-    criticalDataElement: false
+    criticalDataElement: true
     description: ''
     quality:
     - metric: valueOutOfRange
@@ -1329,13 +1414,17 @@ schema:
       description: ''
       dimension: completeness
       severity: critical
+    - metric: valueNotContainSpecialCharacter
+      description: name must not contain special character
+      dimension: correctness
+      severity: critical
   - name: spousemobilephone
     logicalType: string
     physicalType: string
     nullable: true
     primaryKey: false
     unique: false
-    criticalDataElement: false
+    criticalDataElement: true
     description: ''
     quality:
     - metric: valuesNotContainDoubleSpace
@@ -1346,6 +1435,10 @@ schema:
       description: ''
       dimension: completeness
       severity: critical
+    - metric: valuePhoneNumberFormatValid
+      description: Phone number must follow a valid format
+      dimension: correctness
+      severity: warning
   - name: companyareaphone2
     logicalType: string
     physicalType: string
@@ -1369,7 +1462,7 @@ schema:
     nullable: true
     primaryKey: false
     unique: false
-    criticalDataElement: false
+    criticalDataElement: true
     description: ''
     quality:
     - metric: valuesNotContainDoubleSpace
@@ -1380,6 +1473,10 @@ schema:
       description: ''
       dimension: completeness
       severity: critical
+    - metric: valuePhoneNumberFormatValid
+      description: Phone number must follow a valid format
+      dimension: correctness
+      severity: warning
   - name: email
     logicalType: string
     physicalType: string
@@ -1397,6 +1494,10 @@ schema:
       description: ''
       dimension: completeness
       severity: critical
+    - metric: valueEmailFormatValid
+      description: Email must follow a valid email address format
+      dimension: correctness
+      severity: warning
   - name: assetcategory
     logicalType: string
     physicalType: string
@@ -1504,6 +1605,6 @@ slaProperties: []
 changePolicy:
   breakingChange: requires new contract version
 metadata:
-  contractCreatedAt: '2026-03-18'
+  contractCreatedAt: '2026-03-24'
   contractGeneratedBy: auto-odps-script
   notes: ''
